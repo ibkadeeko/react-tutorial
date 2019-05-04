@@ -1,0 +1,41 @@
+{
+  "extends": [
+    "airbnb",
+    "plugin:flowtype/recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "prettier/flowtype",
+    "prettier/react"
+  ],
+  "plugins": [
+    "flowtype",
+    "react",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2016,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true,
+    "browser": true
+  },
+  "rules": {
+    "prettier/prettier": ["warn", {"singleQuote": true, "parser": "flow"}],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prefer-stateless-function": [1, { "ignorePureComponents": true }],
+    "no-use-before-define": ["error", { "functions": true, "classes": true }],
+    "no-param-reassign": ["warn", { "props": false }],
+    "quotes": ["warn", "single", {"allowTemplateLiterals": true}],
+    "react/button-has-type": [0, {
+      "button": true,
+      "submit": true,
+      "reset": true
+    }]
+  }
+}
